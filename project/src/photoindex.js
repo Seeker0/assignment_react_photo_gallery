@@ -1,25 +1,13 @@
 import React, { Component } from 'react';
 
+const Gallery = ({ photos }) => {
+  let pics = photos.data.map(photo => (
+    <div className="col-xs-4">
+      <img src={photo.avatar_url} />
+    </div>
+  ));
 
-const Gallery = ({photos}) => {
+  return <div className="row">{pics}</div>;
+};
 
-let photos = photo.data.map(photo =>{
-	return photo.avatar_url;
-
-})
-
-
-photos.forEach(photo =>{
-	
-return (
-	
-	    <div className="col-xs-4"><img src={photo} /></div>
-	  
-)
-
-})
-
-}
-
-
-export default Gallery
+export default Gallery;
